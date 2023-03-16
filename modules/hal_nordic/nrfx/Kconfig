@@ -225,7 +225,7 @@ config NRFX_SPIS0
 
 config NRFX_SPIS1
 	bool "SPIS1 driver instance"
-	depends on $(dt_nodelabel_has_compat,spi1,$(DT_COMPAT_NORDIC_NRF_SPIS))
+	depends on HAS_HW_NRF_SPIS1
 	select NRFX_SPIS
 
 config NRFX_SPIS2

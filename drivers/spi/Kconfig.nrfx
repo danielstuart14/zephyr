@@ -69,7 +69,7 @@ config SPI_1_NRF_SPIM
 	  Enable nRF SPI Master with EasyDMA on port 1.
 
 config SPI_1_NRF_SPIS
-	def_bool HAS_HW_NRF_SPIS1
+	def_bool $(dt_nodelabel_has_compat,spi1,$(DT_COMPAT_NORDIC_NRF_SPIS))
 	depends on SPI_SLAVE
 	select NRFX_SPIS1
 	help
